@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html style="width:100%;height:100%;" lang="zh-tw">
+	<head>
+		<meta charset="UTF-8">
+		<title>擲骰子</title>
+		<style>
+			body{
+				width: 100%;
+				height: 100%;
+				display:flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			.dice{
+				width:min(90%,100px);
+				height:min(90%,100px);
+			}
+			.dice_image{
+				width:100%;
+				height:100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="dice" id="dice">
+			<img src="0.svg" class="dice_image">
+		</div>
+		<button onclick="randomint(1,6)">擲骰子</button>
+		<script>
+			function randomint(l,r){
+				let loop=r-l+1;
+				let a=Math.random();
+				a*=loop;
+				a+=l;
+				a=Math.floor(a);//取整數
+				if(a==1){
+					document.getElementById("dice").innerHTML=
+						'<img src="1.svg" class="dice_image">';
+				}
+				if(a==2){
+					document.getElementById("dice").innerHTML=
+						'<img src="2.svg" class="dice_image">';
+				}
+				if(a==3){
+					document.getElementById("dice").innerHTML=
+						'<img src="3.svg" class="dice_image">';
+				}
+				if(a==4){
+					document.getElementById("dice").innerHTML=
+						'<img src="4.svg" class="dice_image">';
+				}
+				if(a==5){
+					document.getElementById("dice").innerHTML=
+						'<img src="5.svg" class="dice_image">';
+				}
+				if(a==6){
+					document.getElementById("dice").innerHTML=
+						'<img src="6.svg" class="dice_image">';
+				}
+				///*修改這一行*/document.getElementById("result").innerHTML=a;//輸出a
+				return a;
+			}
+		</script>
+
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://pcic35-html.github.io/class3/dice/">dice</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://kagariet01.github.io/about">KagariET01</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
+
+	</body>
+</html>

@@ -37,6 +37,7 @@ p.s. 最近社長超忙，下禮拜有比賽，這禮拜三又生病，這份講
 ```
 ![Alt text](image/image1.png)  
 [sample](./class)  
+[source](https://github.com/pcic35-html/class3/blob/main/class/index.html)  
 同樣都是`div`，但因為套用了不同的`class`，所以顯示的顏色不同  
 如果一個`HTML`標籤有多個`class`，則會套用多個`class`的樣式  
 
@@ -53,7 +54,7 @@ p.s. 最近社長超忙，下禮拜有比賽，這禮拜三又生病，這份講
 
 # `JS` basic
 ...  
-阿所以`HTML` `CSS` `JS` 之間有甚麼差別
+阿所以`HTML` `CSS` `JS` 之間有甚麼差別  
 - `HTML` 骨架，用於設定網頁基本架構
 - `CSS` 樣式，讓網頁變得好看
 - `JS` 動態，讓網頁可以互動
@@ -103,7 +104,9 @@ wait, nothing!?
 因為它會輸出到終端機裡面，按`F12`按鈕，右邊會多出一個開發者介面，切換到`主控台`(`console`)分頁  
 p.s. 根據使用的瀏覽器，介面、名稱可能會不一樣，這裡以Microsoft Edge做示範  
 ![Alt text](image/image4.png)  
-可以從右邊的`log`看到，`Hello World!`成功輸出了
+可以從右邊的`log`看到，`Hello World!`成功輸出了  
+[sample](./first_js/)
+[source](https://github.com/pcic35-html/class3/blob/main/first_js/index.html)  
 
 ## `JS` `let` 變數
 在`JS`，使用`let`來宣告變數  
@@ -123,6 +126,8 @@ console.log(a);
 console.log(b);
 console.log(c);
 ```
+[sample](./js_let/)  
+[source](https://github.com/pcic35-html/class3/blob/main/js_let/index.html)
 ### ***插播警告！如果有不明人士要求你在`主控台`(`console`)上貼上程式碼，你99%是被騙了，請立即停止操作***
 某些有心人士會透過`JS`獲取你的帳號的憑證，藉此使用你的帳號做非法的事，請務必注意  
 p.s. `JS`無法跨網域存取，我們也沒有在這個網頁上設計帳號系統，不用擔心  
@@ -145,6 +150,7 @@ c=a%b;//取a除b的餘數
 console.log(c);//0
 ```
 ![Alt text](image/image6.png)  
+no sample, no source, do it in console.  
 
 ## `JS` `== != > < >= <=` 比較運算子
 要特別注意，判斷兩數值是否相等時，要用`==`，而不是`=`  
@@ -161,7 +167,9 @@ console.log(a<b);//如果a小於b
 console.log(a>=b);//如果a大於等於b
 console.log(a<=b);//如果a小於等於b
 ```
-![Alt text](image/image7.png)
+![Alt text](image/image7.png)  
+no sample, no source, do it in console.  
+
 ## `JS` `if` 判斷式
 我們想要在某個條件成立下才做某些事  
 例如說，a>b時，我們就輸出`a比b大`，相反的，a\<b時，我們就輸出`a比b小`  
@@ -174,7 +182,7 @@ if(/*判斷式*/){
 	/*上面所有判斷式都不成立時*/
 }
 
-let a=10,b=5;
+let a=10,b=5;//你可以自訂這些變數，會有不一樣的結果
 if(a>b){
 	console.log("a比b大");
 }else if(a==b){
@@ -183,6 +191,7 @@ if(a>b){
 	console.log("a比b小");
 }
 ```
+no sample, no source, do it in console.  
 
 ## `JS` `random` 隨機數
 我們想要讓網頁多一點驚喜，這個時候，可以使用看看`random`  
@@ -190,7 +199,9 @@ if(a>b){
 let a=Math.random();//會產生0~1之間的隨機數
 ```
 ![Alt text](image/image8.png)  
+no sample, no source, do it in console.  
 p.s. 每個人的輸出結果可能不一樣，因為他式random，都一樣的話就不randomㄌ  
+p.s. 若想要生成新的亂數，請再打一次`a=Math.random();`  
 
 ## `JS` `function` 函式
 透過函式，我們可以簡化我們的程式碼
@@ -206,7 +217,10 @@ let a=hi();//呼叫函式
 let b=hi();//回傳值會被存到變數中
 ```
 ![Alt text](image/image9.png)  
+no sample, no source, do it in console.  
+
 只要我在程式碼輸入`hi();`，就會執行`hi()`函式內的程式碼  
+
 
 讓我們建立一個`randomint()`函式，可以產生一個區域內的隨機整數  
 ```js
@@ -224,6 +238,7 @@ function randomint(l,r){
 randomint(1,6);
 ```
 ![Alt text](image/image10.png)  
+no sample, no source, do it in console.  
 我們就可以輕鬆產生1~6之間的亂數了  
 
 # `HTML` `<button>` 按鈕
@@ -235,6 +250,8 @@ randomint(1,6);
 <button onclick="你可以在這邊寫JS程式碼;">但通常只會放函式名稱</button>
 ```
 ![Alt text](image/image11.png)  
+[sample](./html_button/)  
+[source](https://github.com/pcic35-html/class3/blob/main/html_button/index.html)  
 現在點下去還沒有動作，因為我們還沒有寫`JS`程式碼  
 結合我們的`randomint()`函式，我們可以做一個擲骰子的程式  
 ```html
@@ -260,6 +277,8 @@ randomint(1,6);
 </html>
 ```
 ![Alt text](image/image12.png)  
+[sample](./js_fn/)  
+[source](https://github.com/pcic35-html/class3/blob/main/js_fn/index.html)  
 每按一次按鈕，就會產生一個1~6之間的亂數  
 但這對使用者太不友善了，看個結果還要開主控台  
 
@@ -274,6 +293,8 @@ document.getElementById("hi").innerHTML="你好";//使用.innerHTML可以操控�
 </script>
 ```
 ![Alt text](image/image13.png)  
+[sample](./js_docs/)  
+[source](https://github.com/pcic35-html/class3/blob/main/js_docs/index.html)  
 可以看到，原本應該顯示`我愛小ㄌㄌ`的地方，變成`你好`了  
 同樣的概念，我們可以建立一個`<div>`，並設定一個`id`，然後透過`JS`來讓他顯示骰子骰出來的內容  
 ```html
@@ -299,6 +320,8 @@ document.getElementById("hi").innerHTML="你好";//使用.innerHTML可以操控�
 </html>
 ```
 ![Alt text](image/image14.png)  
+[sample](./js_dice/)  
+[soruce](https://github.com/pcic35-html/class3/blob/main/js_dice/index.html)  
 每按一次骰子，就會更新結果  
 
 # 檔案結構
@@ -341,6 +364,9 @@ document.getElementById("hi").innerHTML="你好";//使用.innerHTML可以操控�
 	</body>
 </html>
 ```
+(其實就只是把上面的東西複製下來而已)  
+[sample](./js_dice/)  
+[soruce](https://github.com/pcic35-html/class3/blob/main/js_dice/index.html)  
 
 # 美化我們的網頁
 如題，我們要美化我們的網頁  
@@ -485,9 +511,15 @@ function randomint(l,r){
 [`5.svg`](https://pcicclass--kagariet01.repl.co/dice/5.svg)  
 [`6.svg`](https://pcicclass--kagariet01.repl.co/dice/6.svg)  
 
+[sample](./dice/)  
+[source](https://github.com/pcic35-html/class3/blob/main/dice/index.html)  
+
 
 恭喜你完成一個專案~~，楞著幹嘛，把結果丟到學習歷程阿，離資工系又近了一步~~  
 # ET01說故事時間
 我累了，放過我把  
 `[小ㄌㄌ]` : 是中邪了嗎？是生病了嗎？  
-`[ET01]` : 確實，我生病了
+`[ET01]` : 確實，我生病了  
+
+
+ <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://pcic35-html.github.io/class3/">板中資訊社35th_HTML組_第三節設課_講義</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://kagariet01.github.io/about">KagariET01</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 

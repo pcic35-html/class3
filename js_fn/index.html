@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<head>
+		<meta charset="utf-8">
+		<title>js_fn</title>
+	</head>
+	<body>
+		<button onclick="randomint(1,6)">擲骰子</button>
+
+		<script>
+			function randomint(l,r){
+				let loop=r-l+1;
+				let a=Math.random();
+				a*=loop;
+				a+=l;
+				/*增加這一行*/a=Math.floor(a);//取整數
+				/*增加這一行*/console.log(a);//輸出a
+				return a;
+			}
+		</script>
+	</body>
+</html>
