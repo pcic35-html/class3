@@ -221,6 +221,7 @@ no sample, no source, do it in console.
 
 只要我在程式碼輸入`hi();`，就會執行`hi()`函式內的程式碼  
 
+<!--12/15 課程講到這-->
 
 讓我們建立一個`randomint()`函式，可以產生一個區域內的隨機整數  
 ```js
